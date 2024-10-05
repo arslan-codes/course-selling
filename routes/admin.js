@@ -6,10 +6,26 @@ adminRouter.post("/signup", (req, res) => {
     message: "admin signup endpoint",
   });
 });
-adminRouter.post("/signin", (req, res) => {});
-adminRouter.post("/courses/create", (req, res) => {});
-adminRouter.post("/courses/delete", (req, res) => {});
-adminRouter.post("/courses/add", (req, res) => {});
+adminRouter.post("/signin", (req, res) => {
+  res.json({
+    message: "admin signup endpoint",
+  });
+});
+adminRouter.post("/course", (req, res) => {
+  res.json({
+    message: "admin add endpoint",
+  });
+});
+adminRouter.put("/courses/delete", (req, res) => {
+  res.json({
+    message: "admin edit  endpoint",
+  });
+});
+adminRouter.get("/course/bulk", (req, res) => {
+  res.json({
+    message: "all courses endpoint",
+  });
+});
 
 module.exports = {
   adminRouter: adminRouter,

@@ -1,3 +1,4 @@
+const { type } = require("express/lib/response");
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
@@ -6,12 +7,12 @@ const ObjectId = Schema.ObjectId;
 const userSchema = new Schema({
   firstName: String,
   lastName: String,
-  email: String,
+  email: { type: String, unique: true },
   password: String,
 });
 const adminSchema = new Schema({
+  email: { type: String, unique: true },
   name: String,
-  email: String,
   password: String,
 });
 const courseSchema = new Schema({

@@ -18,8 +18,8 @@ const adminSchema = new Schema({
 const courseSchema = new Schema({
   title: String,
   description: String,
-  Price: Number,
   ImageUrl: String,
+  Price: Number,
   createrId: { type: ObjectId, ref: "adminSchema" },
 });
 const purchaseSchema = new Schema({

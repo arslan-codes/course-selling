@@ -5,7 +5,7 @@ const JWT = require("jsonwebtoken");
 const { adminMiddleware } = require("../middleware/admin");
 const z = require("zod");
 const adminRouter = Router();
-const JWT_ADMIN_PASSWORD = process.env.JWT_ADMIN_PASSWORD; // Make sure it's in your config
+const JWT_ADMIN_PASSWORD = require("../config"); // Make sure it's in your config
 
 // Admin signup
 adminRouter.post("/signup", async (req, res) => {
@@ -59,6 +59,7 @@ adminRouter.post("/signin", async (req, res) => {
 });
 
 // Admin course management
+// adding a course
 adminRouter.post("/course", adminMiddleware, async (req, res) => {
   const { title, description, imageUrl, price } = req.body;
   const course = await courseModel.create({
@@ -70,7 +71,7 @@ adminRouter.post("/course", adminMiddleware, async (req, res) => {
   });
   res.json({ message: "Course created successfully", courseId: course._id });
 });
-
+//editing a course
 adminRouter.put("/course", adminMiddleware, async (req, res) => {
   const { courseId, title, description, imageUrl, price } = req.body;
   const updatedCourse = await courseModel.updateOne(
@@ -80,6 +81,7 @@ adminRouter.put("/course", adminMiddleware, async (req, res) => {
   res.json({ message: "Course updated successfully", updatedCourse });
 });
 
+//getting all courses
 adminRouter.get("/courses", adminMiddleware, async (req, res) => {
   const courses = await courseModel.find({ createrId: req.userId });
   res.json({ courses: courses });

@@ -29,3 +29,7 @@ async function main() {
 }
 
 main();
+/**\
+ const {userRouster}= require("./routes/user")
+app.use("/api/v1/user",userRouter)
+ */

@@ -1,4 +1,4 @@
-const { JWT_ADMIN_PASSWORD } = require("../config");
+const { JWT_ADMIN_PASSWORD } = require("../../config");
 const JWT = require("jsonwebtoken");
 
 function adminMiddleware(req, res, next) {

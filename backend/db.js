@@ -1,9 +1,7 @@
-const { type } = require("express/lib/response");
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
-
 const userSchema = new Schema({
   firstName: String,
   lastName: String,
@@ -38,3 +36,14 @@ module.exports = {
   courseModel,
   purchaseModel,
 };
+
+/*
+const mongoose=require("mongoose");
+cosnt Schema= mongoos.schema;
+const ObjectId= scheme.Objec
+cont purchaseSchema= new Schema({
+user:strigf
+}) 
+
+const puirchaseModel= mongoos.model("uiser",user)
+ */

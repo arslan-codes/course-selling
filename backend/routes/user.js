@@ -14,7 +14,6 @@ userRouter.post("/signup", async (req, res) => {
     email: z.string().min(10).max(100).email(),
     password: z.string().min(3).max(10),
   });
-
   try {
     const parsedData = requiredBody.safeParse(req.body);
     if (!parsedData.success) {

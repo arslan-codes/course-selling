@@ -11,8 +11,6 @@ import NoPage from "./pages/NoPage";
 function App() {
   return (
     <div>
-      <div>This is a course selling App</div>
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

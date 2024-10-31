@@ -11,9 +11,7 @@ const Layout = () => {
         {" "}
         <Header />
       </div>
-      <div>
-        <Hero />
-      </div>
+
       <div
         style={{
           height: "90vh",

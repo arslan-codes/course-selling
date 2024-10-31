@@ -7,6 +7,7 @@ import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+import Hero from "./pages/Hero";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Hero />} />
             <Route path="/blogs" element={<Blog />} />
             <Route path="/contacts" element={<Contact />} />
             <Route path="*" element={<NoPage />} />

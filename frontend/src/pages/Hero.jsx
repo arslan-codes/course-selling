@@ -5,7 +5,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white min-h-screen flex items-center justify-center">
+    <div className="bg-gradient-to-br from-gray-900 via-fuchsia-900 to-black text-white min-h-screen flex items-center justify-center">
       <div className="relative px-6 w-full max-w-5xl">
         {/* Background gradient decoration */}
         <div

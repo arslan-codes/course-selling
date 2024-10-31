@@ -10,21 +10,12 @@ const Header = () => {
           <nav className="flex  justify-end p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1 lg:justify-center">
               <span className="-m-1.5 p-1.5 text-lg bold">
-                <Link to="/" className="font-extrabold text-3xl">
+                <Link to="/" className="font-extrabold text-">
                   Enablers
                 </Link>
               </span>
             </div>
 
-            <div className="hidden lg:flex lg:flex-1 lg:justify-center">
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-white"
-              >
-                <Link to="/">Home</Link>
-                {/* <span aria-hidden="true">&rarr;</span> */}
-              </a>
-            </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-center">
               <a
                 href="#"
@@ -41,6 +32,15 @@ const Header = () => {
               >
                 <Link to="/contacts">Contact</Link>
 
+                {/* <span aria-hidden="true">&rarr;</span> */}
+              </a>
+            </div>
+            <div className="hidden lg:flex lg:flex-1 lg:justify-center">
+              <a
+                href="#"
+                className="text-sm font-semibold leading-6 text-white"
+              >
+                <Link to="/">Signup</Link>
                 {/* <span aria-hidden="true">&rarr;</span> */}
               </a>
             </div>
